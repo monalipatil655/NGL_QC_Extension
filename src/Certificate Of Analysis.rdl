@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_InspectionDataSheet">
+          <DataField>No_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="DocumentType_InspectionDataSheet">
+          <DataField>DocumentType_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="DocumentNo_InspectionDataSheet">
+          <DataField>DocumentNo_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="PostingDate_InspectionDataSheet">
+          <DataField>PostingDate_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Quantity_InspectionDataSheet">
+          <DataField>Quantity_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Quantity_InspectionDataSheetFormat">
+          <DataField>Quantity_InspectionDataSheetFormat</DataField>
+        </Field>
+        <Field Name="RefID_InspectionDataSheet">
+          <DataField>RefID_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="DocumentDate_InspectionDataSheet">
+          <DataField>DocumentDate_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ProdOrderDate_InspectionDataSheet">
+          <DataField>ProdOrderDate_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="LotNo_InspectionDataSheet">
+          <DataField>LotNo_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="PurchOrderQuantity_InspectionDataSheet">
+          <DataField>PurchOrderQuantity_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="PurchOrderQuantity_InspectionDataSheetFormat">
+          <DataField>PurchOrderQuantity_InspectionDataSheetFormat</DataField>
+        </Field>
+        <Field Name="VendorNo_InspectionDataSheet">
+          <DataField>VendorNo_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="VendorName_InspectionDataSheet">
+          <DataField>VendorName_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ItemNo_InspectionDataSheet">
+          <DataField>ItemNo_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ItemDescription_InspectionDataSheet">
+          <DataField>ItemDescription_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ItemDescription2_InspectionDataSheet">
+          <DataField>ItemDescription2_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="UnitofMessure_InspectionDataSheet">
+          <DataField>UnitofMessure_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ItemTracking_InspectionDataSheet">
+          <DataField>ItemTracking_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Remarks_InspectionDataSheet">
+          <DataField>Remarks_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="CertificateNo_InspectionDataSheet">
+          <DataField>CertificateNo_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="GRNNo_InspectionDataSheet">
+          <DataField>GRNNo_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="GRNDate_InspectionDataSheet">
+          <DataField>GRNDate_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="GRNQuantity_InspectionDataSheet">
+          <DataField>GRNQuantity_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="GRNQuantity_InspectionDataSheetFormat">
+          <DataField>GRNQuantity_InspectionDataSheetFormat</DataField>
+        </Field>
+        <Field Name="ProdOrderQuantity_InspectionDataSheet">
+          <DataField>ProdOrderQuantity_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ProdOrderQuantity_InspectionDataSheetFormat">
+          <DataField>ProdOrderQuantity_InspectionDataSheetFormat</DataField>
+        </Field>
+        <Field Name="BeforeGRN_InspectionDataSheet">
+          <DataField>BeforeGRN_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Approval_InspectionDataSheet">
+          <DataField>Approval_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Status_InspectionDataSheet">
+          <DataField>Status_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ApprovedQuantity_InspectionDataSheet">
+          <DataField>ApprovedQuantity_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ApprovedQuantity_InspectionDataSheetFormat">
+          <DataField>ApprovedQuantity_InspectionDataSheetFormat</DataField>
+        </Field>
+        <Field Name="RejectedQuantity_InspectionDataSheet">
+          <DataField>RejectedQuantity_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="RejectedQuantity_InspectionDataSheetFormat">
+          <DataField>RejectedQuantity_InspectionDataSheetFormat</DataField>
+        </Field>
+        <Field Name="SampleDrawnQuantity_InspectionDataSheet">
+          <DataField>SampleDrawnQuantity_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="SampleDrawnQuantity_InspectionDataSheetFormat">
+          <DataField>SampleDrawnQuantity_InspectionDataSheetFormat</DataField>
+        </Field>
+        <Field Name="MfgDate_InspectionDataSheet">
+          <DataField>MfgDate_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Analyzedon_InspectionDataSheet">
+          <DataField>Analyzedon_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Reteston_InspectionDataSheet">
+          <DataField>Reteston_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="SampleDrawnOn_InspectionDataSheet">
+          <DataField>SampleDrawnOn_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="InspectedBy_InspectionDataSheet">
+          <DataField>InspectedBy_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ApprovedBy_InspectionDataSheet">
+          <DataField>ApprovedBy_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ReplannedProdOrder_InspectionDataSheet">
+          <DataField>ReplannedProdOrder_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="ReplannedItemNo_InspectionDataSheet">
+          <DataField>ReplannedItemNo_InspectionDataSheet</DataField>
+        </Field>
+        <Field Name="Item_Description">
+          <DataField>Item_Description</DataField>
+        </Field>
+        <Field Name="Item_Synonym">
+          <DataField>Item_Synonym</DataField>
+        </Field>
+        <Field Name="Item_CAS_No">
+          <DataField>Item_CAS_No</DataField>
+        </Field>
+        <Field Name="Item_MolFormula">
+          <DataField>Item_MolFormula</DataField>
+        </Field>
+        <Field Name="Item_MolWeight">
+          <DataField>Item_MolWeight</DataField>
+        </Field>
+        <Field Name="Item_MolWeightFormat">
+          <DataField>Item_MolWeightFormat</DataField>
+        </Field>
+        <Field Name="ApprovedBy">
+          <DataField>ApprovedBy</DataField>
+        </Field>
+        <Field Name="DateOf_Release">
+          <DataField>DateOf_Release</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_InspectionSheetLine">
+          <DataField>UnitofMeasure_InspectionSheetLine</DataField>
+        </Field>
+        <Field Name="TextValue_InspectionSheetLine">
+          <DataField>TextValue_InspectionSheetLine</DataField>
+        </Field>
+        <Field Name="MinValue_InspectionSheetLine">
+          <DataField>MinValue_InspectionSheetLine</DataField>
+        </Field>
+        <Field Name="MinValue_InspectionSheetLineFormat">
+          <DataField>MinValue_InspectionSheetLineFormat</DataField>
+        </Field>
+        <Field Name="MaxValue_InspectionSheetLine">
+          <DataField>MaxValue_InspectionSheetLine</DataField>
+        </Field>
+        <Field Name="MaxValue_InspectionSheetLineFormat">
+          <DataField>MaxValue_InspectionSheetLineFormat</DataField>
+        </Field>
+        <Field Name="ActualValue_InspectionSheetLine">
+          <DataField>ActualValue_InspectionSheetLine</DataField>
+        </Field>
+        <Field Name="ActualValue_InspectionSheetLineFormat">
+          <DataField>ActualValue_InspectionSheetLineFormat</DataField>
+        </Field>
+        <Field Name="QcDescription_InspectionSheetLine">
+          <DataField>QcDescription_InspectionSheetLine</DataField>
+        </Field>
+        <Field Name="Remark_InspectionSheetLine">
+          <DataField>Remark_InspectionSheetLine</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
