@@ -24,6 +24,7 @@ page 50121 "User-wise Bin Security"
                 field(Bin; Bin)
                 {
                     ApplicationArea = All;
+                    Editable = true;
                 }
             }
         }
