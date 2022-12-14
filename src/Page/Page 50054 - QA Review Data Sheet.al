@@ -8,7 +8,9 @@ page 50054 "QA Review Data Sheet"
     DeleteAllowed = false;
     Editable = true;
     InsertAllowed = false;
+    ModifyAllowed = true;
     PageType = Document;
+    PromotedActionCategories = 'New,Process,Report';
     RefreshOnActivate = true;
     SourceTable = 50020;
     SourceTableView = SORTING("No.")
@@ -16,6 +18,8 @@ page 50054 "QA Review Data Sheet"
                       WHERE(Status = FILTER(Open | "Under Test"),
                             "QA Reviewed" = FILTER(False),
                             Approval = FILTER("Under Approval"));
+    ApplicationArea = All;
+    UsageCategory = Lists;
 
     layout
     {
@@ -27,18 +31,22 @@ page 50054 "QA Review Data Sheet"
                 field("No."; "No.")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Document No."; "Document No.")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Ref ID"; "Ref ID")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Posting Date"; "Posting Date")
                 {
                     Editable = true;
+                    ApplicationArea = All;
                 }
                 field(Quantity; Quantity)
                 {
@@ -47,30 +55,37 @@ page 50054 "QA Review Data Sheet"
                 field("Document Date"; "Document Date")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Unit of Messure"; "Unit of Messure")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Certificate No."; "Certificate No.")
                 {
                     Editable = true;
+                    ApplicationArea = All;
                 }
                 field("Lot No."; "Lot No.")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Item No."; "Item No.")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Item Description"; "Item Description")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Item Description 2"; "Item Description 2")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Prod. Packing Detail"; "Prod. Packing Detail")
                 {
@@ -78,35 +93,44 @@ page 50054 "QA Review Data Sheet"
                 field("Before GRN"; "Before GRN")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Sample Drawn Quantity"; "Sample Drawn Quantity")
                 {
                     DecimalPlaces = 0 : 3;
+                    ApplicationArea = All;
                 }
                 field("Sample UOM"; "Sample UOM")
                 {
+                    ApplicationArea = All;
                 }
                 field("Location Code"; "Location Code")
                 {
+                    ApplicationArea = All;
                 }
                 field("Sample Drawn On"; "Sample Drawn On")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("No. Container Sample"; "No. Container Sample")
                 {
+                    ApplicationArea = All;
                 }
                 field("EXP Date"; "EXP Date")
                 {
                     Editable = true;
+                    ApplicationArea = All;
                 }
                 field("Mfg. Date"; "Mfg. Date")
                 {
                     Editable = true;
+                    ApplicationArea = All;
                 }
                 field("Retest on"; "Retest on")
                 {
                     Editable = true;
+                    ApplicationArea = All;
                 }
                 field("Analyzed on"; "Analyzed on")
                 {
@@ -114,16 +138,20 @@ page 50054 "QA Review Data Sheet"
                 field("Approved By"; "Approved By")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Inspected By"; "Inspected By")
                 {
+                    ApplicationArea = All;
                 }
                 field("Item Tracking"; "Item Tracking")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Pending Inspection"; "Pending Inspection")
                 {
+                    ApplicationArea = All;
                 }
             }
             part(InspectionLine; 50035)
@@ -133,31 +161,38 @@ page 50054 "QA Review Data Sheet"
                               "Document No." = FIELD("Document No.");
                 SubPageView = SORTING("No.", "Line No.")
                               ORDER(Ascending);
+                ApplicationArea = Suite;
             }
             group(GRN)
             {
                 Caption = 'GRN';
                 field("Vendor No."; "Vendor No.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Vendor Name"; "Vendor Name")
                 {
+                    ApplicationArea = All;
                 }
                 field("Purch. Order Quantity"; "Purch. Order Quantity")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("GRN No."; "GRN No.")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("GRN Date"; "GRN Date")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("GRN Quantity"; "GRN Quantity")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
             }
             group("Prod. Order")
@@ -166,10 +201,12 @@ page 50054 "QA Review Data Sheet"
                 field("Prod. Order Date"; "Prod. Order Date")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Prod. Order Quantity"; "Prod. Order Quantity")
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
             }
             group("Transfer Order")
@@ -177,12 +214,15 @@ page 50054 "QA Review Data Sheet"
                 Caption = 'Transfer Order';
                 field("Transfer Receipt No."; "Transfer Receipt No.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Transfer Receipt Quantity"; "Transfer Receipt Quantity")
                 {
+                    ApplicationArea = All;
                 }
                 field("Transfer Receipt Date"; "Transfer Receipt Date")
                 {
+                    ApplicationArea = All;
                 }
             }
             group(Return)
@@ -190,18 +230,23 @@ page 50054 "QA Review Data Sheet"
                 Caption = 'Return';
                 field("Return Receipt No."; "Return Receipt No.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Return Receipt Quantity"; "Return Receipt Quantity")
                 {
+                    ApplicationArea = All;
                 }
                 field("Return Receipt Date"; "Return Receipt Date")
                 {
+                    ApplicationArea = All;
                 }
                 field("Customer No."; "Customer No.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Customer Name"; "Customer Name")
                 {
+                    ApplicationArea = All;
                 }
             }
             group(Retest)
@@ -209,9 +254,11 @@ page 50054 "QA Review Data Sheet"
                 Caption = 'Retest';
                 field("Retest Document"; "Retest Document")
                 {
+                    ApplicationArea = All;
                 }
                 field("Retest from Doc No"; "Retest from Doc No")
                 {
+                    ApplicationArea = All;
                 }
             }
             group(Quality)
@@ -219,15 +266,18 @@ page 50054 "QA Review Data Sheet"
                 Caption = 'Quality';
                 field(Remarks; Remarks)
                 {
+                    ApplicationArea = All;
                 }
                 field(Approval; Approval)
                 {
                     Editable = false;
+                    ApplicationArea = All;
                     OptionCaption = '<WIP,Under Approval,Approved,Rejected>';
                 }
                 field(Status; Status)
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
             }
         }
@@ -245,6 +295,7 @@ page 50054 "QA Review Data Sheet"
                 {
                     Caption = 'Review';
                     Image = Approval;
+                    ApplicationArea = Suite;
 
                     trigger OnAction();
                     begin
@@ -266,6 +317,7 @@ page 50054 "QA Review Data Sheet"
                 {
                     Caption = 'Send to QC for Retest';
                     Image = SendTo;
+                    ApplicationArea = Suite;
 
                     trigger OnAction();
                     begin
@@ -294,6 +346,7 @@ page 50054 "QA Review Data Sheet"
                     Image = Print;
                     Promoted = true;
                     PromotedCategory = "Report";
+                    ApplicationArea = Suite;
 
                     trigger OnAction();
                     begin
@@ -305,7 +358,7 @@ page 50054 "QA Review Data Sheet"
                 }
                 action("File Export")
                 {
-
+                    ApplicationArea = Suite;
                     trigger OnAction();
                     var
                         // TempBlob: Record 99008535;

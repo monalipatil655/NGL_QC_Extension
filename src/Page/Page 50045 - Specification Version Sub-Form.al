@@ -22,6 +22,7 @@ page 50045 "Specification Version Sub-Form"
                 {
                     Style = Strong;
                     StyleExpr = TRUE;
+                    ApplicationArea = All;
 
                     trigger OnValidate();
                     begin
@@ -35,60 +36,74 @@ page 50045 "Specification Version Sub-Form"
                 }
                 field("Group Code"; "Group Code")
                 {
+                    ApplicationArea = All;
                 }
                 field("Qlty Measure Code"; "Qlty Measure Code")
                 {
                     Editable = MinMaxeditable;
                     Style = Strong;
                     StyleExpr = NameEmphasize;
+                    ApplicationArea = All;
                 }
                 field("Test Manadatory"; "Test Manadatory")
                 {
                     Editable = MinMaxeditable;
+                    ApplicationArea = All;
                 }
                 field("Unit of Measure"; "Unit of Measure")
                 {
                     Editable = MinMaxeditable;
+                    ApplicationArea = All;
                 }
                 field(Description; Description)
                 {
                     Style = Strong;
                     StyleExpr = NameEmphasize;
+                    ApplicationArea = All;
                 }
                 field("Specification Reference"; "Specification Reference")
                 {
                 }
                 field("Protocol No."; "Protocol No.")
                 {
+                    ApplicationArea = All;
                 }
                 field("Test Method"; "Test Method")
                 {
+                    ApplicationArea = All;
                 }
                 field(Qualitative; Qualitative)
                 {
                     Editable = false;
+                    ApplicationArea = All;
                 }
                 field("Text Value"; "Text Value")
                 {
                     Editable = MinMaxeditable;
+                    ApplicationArea = All;
                 }
                 field("Laboratory Details"; "Laboratory Details")
                 {
+                    ApplicationArea = All;
                 }
                 field("Min. Value"; "Min. Value")
                 {
                     Editable = MinMaxeditable;
+                    ApplicationArea = All;
                 }
                 field("Max. Value"; "Max. Value")
                 {
                     Editable = MinMaxeditable;
+                    ApplicationArea = All;
                 }
                 field("Mean Tolerance"; "Mean Tolerance")
                 {
                     Editable = MinMaxeditable;
+                    ApplicationArea = All;
                 }
                 field("Parent Group Code"; "Parent Group Code")
                 {
+                    ApplicationArea = All;
                 }
             }
         }

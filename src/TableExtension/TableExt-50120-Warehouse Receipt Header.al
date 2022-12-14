@@ -5,7 +5,7 @@ tableextension 50120 Warehouse_Receipt_Header extends "Warehouse Receipt Header"
     fields
     {
 
-        //Unsupported feature: PropertyDeletion on ""Assigned User ID"(Field 3)". Please convert manually.
+        //Unsupported feature: PropertyDeletion on ""Assigned User ID"(Field 3)". Please convert manually.        
         field(50004; "Manufacturing Date"; Date)
         {
             Description = 'sanjay 07/July/2015';

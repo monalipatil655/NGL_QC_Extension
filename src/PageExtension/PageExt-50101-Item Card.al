@@ -2,7 +2,7 @@ pageextension 50101 Item_Card_QC extends "Item Card"
 {
     layout
     {
-        addafter("Assembly Policy")
+        addafter(Exempted)
         {
             field("QC Check"; "QC Check")
             {

@@ -187,6 +187,7 @@ page 50030 "Inspection Data Sheet"
                               "Document No." = FIELD("Document No.");
                 SubPageView = SORTING("No.", "Line No.")
                               ORDER(Ascending);
+                ApplicationArea = Suite;
             }
             group(GRN)
             {

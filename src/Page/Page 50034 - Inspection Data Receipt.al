@@ -152,6 +152,7 @@ page 50034 "Inspection Data Receipt"
                               "Document No." = FIELD("Document No.");
                 SubPageView = SORTING("No.", "Line No.")
                               ORDER(Ascending);
+                ApplicationArea = Suite;
             }
             group(Approval1)
             {
@@ -555,7 +556,7 @@ page 50034 "Inspection Data Receipt"
         //"Approved Quantity" := "GRN Quantity" - "Sample Drawn Quantity" - "Rejected Quantity";
         CALCFIELDS("Posted Sample Quanity");///
         "Approved Quantity" := "GRN Quantity" - "Posted Sample Quanity" - "Rejected Quantity";    //PCPL-BRB-20211220
-        CurrPage.UPDATE(TRUE);
+        //CurrPage.Update(true);                                                                                       //CurrPage.UPDATE(TRUE);
 
         IF ("Document Type" = "Document Type"::"Purch. Order") AND ("Before GRN") THEN
             beforeGRN := TRUE

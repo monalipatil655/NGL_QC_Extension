@@ -6,6 +6,8 @@ page 50044 "Specification Version Header"
     SourceTable = 50017;
     SourceTableView = SORTING("Specs ID")
                       ORDER(Ascending);
+    ApplicationArea = All;
+    UsageCategory = Lists;
 
     layout
     {
@@ -41,10 +43,12 @@ page 50044 "Specification Version Header"
             part(specsline; 50045)
             {
                 Editable = editSubForm;
+                ApplicationArea = Suite;
                 SubPageLink = "Specs ID" = FIELD("Specs ID"),
                               "Version Code" = FIELD("Version Code");
                 SubPageView = SORTING("Specs ID", "Line No.")
                               ORDER(Ascending);
+
             }
         }
     }

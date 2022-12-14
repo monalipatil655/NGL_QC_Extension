@@ -58,6 +58,8 @@ page 50041 "Specification Header"
                               "Version Code" = CONST();
                 SubPageView = SORTING("Specs ID", "Line No.")
                               ORDER(Ascending);
+                ApplicationArea = Suite;
+
             }
         }
     }
@@ -69,6 +71,7 @@ page 50041 "Specification Header"
             action(Version)
             {
                 Image = Versions;
+                ApplicationArea = Suite;
                 Promoted = true;
                 PromotedCategory = Process;
                 RunObject = Page 50043;

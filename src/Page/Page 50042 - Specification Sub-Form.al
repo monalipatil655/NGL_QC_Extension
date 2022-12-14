@@ -11,6 +11,7 @@ page 50042 "Specification Sub-Form"
 
     layout
     {
+
         area(content)
         {
             repeater(Group)
@@ -22,6 +23,7 @@ page 50042 "Specification Sub-Form"
                 {
                     Style = Strong;
                     StyleExpr = TRUE;
+                    ApplicationArea = all;
 
                     trigger OnValidate();
                     begin
@@ -41,6 +43,7 @@ page 50042 "Specification Sub-Form"
                 {
                     ApplicationArea = all;
                 }
+
                 field("Qlty Measure Code"; "Qlty Measure Code")
                 {
                     Editable = MinMaxeditable;
