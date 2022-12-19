@@ -4,7 +4,7 @@ page 50054 "QA Review Data Sheet"
 
     // s
 
-    Caption = 'Inspection Sheet';
+    Caption = 'QA Review Data Sheet';
     DeleteAllowed = false;
     Editable = true;
     InsertAllowed = false;
@@ -18,8 +18,8 @@ page 50054 "QA Review Data Sheet"
                       WHERE(Status = FILTER(Open | "Under Test"),
                             "QA Reviewed" = FILTER(False),
                             Approval = FILTER("Under Approval"));
-    ApplicationArea = All;
-    UsageCategory = Lists;
+    // ApplicationArea = All;
+    // UsageCategory = Lists;
 
     layout
     {
@@ -33,6 +33,8 @@ page 50054 "QA Review Data Sheet"
                     Editable = false;
                     ApplicationArea = All;
                 }
+
+
                 field("Document No."; "Document No.")
                 {
                     Editable = false;

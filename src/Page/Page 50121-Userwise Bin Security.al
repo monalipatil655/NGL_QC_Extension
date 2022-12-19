@@ -3,7 +3,7 @@ page 50121 "User-wise Bin Security"
     Caption = 'User Bin Security Code';
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 50070;
+    SourceTable = 50052;
     ApplicationArea = All;
     UsageCategory = Lists;
 

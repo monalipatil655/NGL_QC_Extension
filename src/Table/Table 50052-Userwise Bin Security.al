@@ -1,4 +1,4 @@
-table 50070 "User-wise Bin Security"
+table 50052 "User-wise Bin Security"
 {
     LookupPageID = 50121;
 
